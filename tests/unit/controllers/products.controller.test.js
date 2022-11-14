@@ -31,16 +31,10 @@ describe('Testes de unidade do controller de produtos', function () {
     expect(status).to.deep.equal(200);
   });
 
-    it('Recebe o produto com id correto', async function () {
+    it('Mensagem de error caso o produto não exista', async function () {
     sinon.stub(connection, 'execute').resolves([[]]);
     const { body, status } = await chai.request(app).get('/products/1');
     expect(body).to.deep.equal({ message: 'Product not found' });
     expect(status).to.deep.equal(404);
   });
-
-  // it('Se ao passar um id que não existe recebe msg de error', async function () {
-  //   sinon.stub(productsService, 'getProductIdService').resolves();
-  //   const result = await productsService.getProductIdService(null);
-  //   expect().to.deep.equal();
-  // });
 });

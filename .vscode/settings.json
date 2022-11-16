@@ -38,6 +38,7 @@
     "mock",
     "mocks",
     "Passenger",
+    "snakeize",
     "stub"
   ]
 }

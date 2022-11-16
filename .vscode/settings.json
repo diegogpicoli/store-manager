@@ -35,10 +35,16 @@
   "barrelr.lineEnding": "LF",
   "cSpell.language": "pt-BR",
   "cSpell.words": [
+    "middlewares",
     "mock",
     "mocks",
+    "must",
     "Passenger",
+    "quantity",
+    "sale",
+    "sales",
     "snakeize",
+    "Sold",
     "stub"
   ]
 }

@@ -6,4 +6,6 @@ module.exports = {
   getProductIdService: productsService.getProductIdService,
   insertProductService: productsService.insertProductService,
   insertSalesService: salesService.insertSalesService,
+  getAllSalesService: salesService.getAllSalesService,
+  getSalesIdService: salesService.getSalesIdService,
 };

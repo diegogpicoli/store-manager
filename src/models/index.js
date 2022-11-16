@@ -6,4 +6,6 @@ module.exports = {
   getProductIdModel: productsModel.getProductId,
   insertProductModel: productsModel.insertProduct,
   insertSalesModel: salesModel.insertSales,
+  getAllSalesModel: salesModel.getAllSales,
+  getSalesIdModel: salesModel.getSalesId,
 };

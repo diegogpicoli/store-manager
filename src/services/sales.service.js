@@ -1,5 +1,22 @@
 const model = require('../models');
 
+const getAllSalesService = async () => {
+  const sales = await model.getAllSalesModel();
+  return { type: null, message: sales };
+};
+
+const getSalesIdService = async (id) => {
+  const sales = await model.getAllSalesModel();
+
+  const verificaId = sales.find((sale) => sale.saleId === Number(id));
+  console.log(verificaId);
+
+  if (!verificaId) return { type: 'NOT_FOUND', message: '"Sale not found"' };
+  const salesId = await model.getSalesIdModel(id);
+
+  return { type: null, message: salesId };
+};
+
 const insertSalesService = async (sales) => {
   const ids = sales.map((product) => product.productId);
 
@@ -18,4 +35,6 @@ const insertSalesService = async (sales) => {
 
 module.exports = {
   insertSalesService,
+  getAllSalesService,
+  getSalesIdService,
 };

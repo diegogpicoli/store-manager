@@ -4,16 +4,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:3000/products",
-    "url": "http://localhost:3000/sales/1",
-    "method": "GET",
+    "url": "http://localhost:3000/products/10",
+    "method": "PUT",
     "sortNum": 0,
     "created": "2022-11-11T18:18:20.728Z",
-    "modified": "2022-11-17T18:03:57.644Z",
+    "modified": "2022-11-17T20:26:29.064Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "[\n  {\n    \"productId\": 2,\n    \"quantity\": 1\n  },\n  {\n    \"productId\": 4,\n    \"quantity\": 5\n  }\n]",
+      "raw": "{\n  \"name\": \"seila\"\n}",
       "form": []
     },
     "tests": []

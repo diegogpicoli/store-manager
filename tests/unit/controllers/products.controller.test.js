@@ -35,9 +35,11 @@ describe('Testes de unidade do controller de produtos', function () {
     expect(status).to.deep.equal(404);
   });
 
-  // it('Adiciona item ao banco de dados', async function () {
-  //   sinon.stub(connection, 'execute').resolves([{ insertId: 5 }]);
+  it('Adiciona item ao banco de dados', async function () {
+    sinon.stub(connection, 'execute')
+      .onFirstCall().resolves([{ insertId: 5 }])
+      .onSecondCall().resolves([[{ "id": 5, "name": "ProdutoX" }]])
     
-  //   const { body, status } = await chai.request(app).post('/products').send({ name: 'ProdutoX' })
-  // });
+    const { body, status } = await chai.request(app).post('/products').send({ name: 'ProdutoX' })
+  });
 });

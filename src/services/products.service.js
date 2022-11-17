@@ -19,8 +19,17 @@ const insertProductService = async (products) => {
   return { type: null, message: insertId };
 };
 
+const attProductService = async (id, name) => {
+  const affectedRows = await productsModel.attProductModel(id, name);
+
+  if (!affectedRows) return { type: 'NOT_FOUND', message: 'Product not found' };
+
+  return { type: null, message: affectedRows };
+};
+
 module.exports = {
   getAllService,
   getProductIdService,
   insertProductService,
+  attProductService,
 };

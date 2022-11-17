@@ -32,12 +32,12 @@ const salesArray = [
 
 const salesId = [
   {
-    "date": "2022-11-16T23:11:40.000Z",
+    "date": "2022-11-17T23:11:50.000Z",
     "productId": 1,
     "quantity": 5
   },
   {
-    "date": "2022-11-16T23:11:40.000Z",
+    "date": "2022-11-17T23:11:50.000Z",
     "productId": 2,
     "quantity": 10
   }

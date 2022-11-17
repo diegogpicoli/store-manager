@@ -9,7 +9,6 @@ const getSalesIdService = async (id) => {
   const sales = await model.getAllSalesModel();
 
   const verificaId = sales.find((sale) => sale.saleId === Number(id));
-  console.log(verificaId);
 
   if (!verificaId) return { type: 'NOT_FOUND', message: '"Sale not found"' };
   const salesId = await model.getSalesIdModel(id);

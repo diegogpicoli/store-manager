@@ -20,4 +20,9 @@ describe('Testes de unidade do model de produtos', function () {
     const result = await productsModel.getProductIdModel(2);
     expect(result).to.equal(products.productsId[0]);
   });
+
+    it('Testa adição de item ao banco de dados', async function () {
+      sinon.stub(connection, 'execute').resolves([2]);
+      const result = await productsModel.insertProductModel({ name: 'productX'});
+  });
 });

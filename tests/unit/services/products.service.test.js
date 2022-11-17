@@ -28,4 +28,10 @@ describe('Testes de unidade do service de produtos', function () {
     const result = await productsService.getProductIdService(null);
     expect().to.deep.equal();
   });
+
+    it('Testa adição de produtos ao banco de dados', async function () {
+    sinon.stub(productsModel, 'insertProductModel').resolves(2);
+    const result = await productsService.insertProductService(2);
+    expect(result).to.deep.equal({ type: null, message: 2 });
+  });
 });

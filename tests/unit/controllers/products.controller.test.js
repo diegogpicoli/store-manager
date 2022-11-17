@@ -7,9 +7,6 @@ chai.use(chaiHttp);
 chai.use(sinonChai);
 const app = require('../../../src/app');
 
-const productsController = require('../../../src/controllers');
-const productsService = require('../../../src/services');
-
 const connection = require('../../../src/models/connection');
 
 const products = require('./mocks/products.controller.mock');
@@ -31,10 +28,16 @@ describe('Testes de unidade do controller de produtos', function () {
     expect(status).to.deep.equal(200);
   });
 
-    it('Mensagem de error caso o produto não exista', async function () {
+  it('Mensagem de error caso o produto não exista', async function () {
     sinon.stub(connection, 'execute').resolves([[]]);
     const { body, status } = await chai.request(app).get('/products/1');
     expect(body).to.deep.equal({ message: 'Product not found' });
     expect(status).to.deep.equal(404);
+  });
+
+  it('Adiciona item ao banco de dados', async function () {
+    sinon.stub(connection, 'execute').resolves([{ insertId: 5 }]);
+    
+    const { body, status } = await chai.request(app).post('/products').send({ name: 'ProdutoX' })
   });
 });

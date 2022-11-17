@@ -16,9 +16,21 @@ const products = [
 const productsId =   [{
     "id": 2,
     "name": "Traje de encolhimento"
-  }]
+}]
+  
+const productBody = [
+  {
+    "productId": 1,
+    "quantity": 1
+  },
+  {
+    "productId": 2,
+    "quantity": 5
+  }
+]
 
 module.exports = {
   products,
   productsId,
+  productBody,
 }

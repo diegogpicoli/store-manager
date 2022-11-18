@@ -6,6 +6,7 @@ module.exports = {
   getAllProductsId: productsController.getAllProductsId,
   insertProduct: productsController.insertProduct,
   attProduct: productsController.attProduct,
+  deleteProduct: productsController.deleteProduct,
   insertSales: salesController.insertSales,
   getAllSales: salesController.getAllSales,
   getSalesId: salesController.getSalesId,

@@ -28,8 +28,19 @@ const insertSales = async (req, res) => {
   });
 };
 
+const deleteSales = async (req, res) => {
+  const { id } = req.params;
+
+  const { type, message } = await services.deleteSalesService(id);
+
+  if (type) return res.status(404).json({ message });
+
+  res.status(204).json();
+};
+
 module.exports = {
   insertSales,
   getAllSales,
   getSalesId,
+  deleteSales,
 };

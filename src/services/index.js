@@ -10,4 +10,5 @@ module.exports = {
   insertSalesService: salesService.insertSalesService,
   getAllSalesService: salesService.getAllSalesService,
   getSalesIdService: salesService.getSalesIdService,
+  deleteSalesService: salesService.deleteSalesService,
 };

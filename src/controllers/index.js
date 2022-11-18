@@ -10,4 +10,5 @@ module.exports = {
   insertSales: salesController.insertSales,
   getAllSales: salesController.getAllSales,
   getSalesId: salesController.getSalesId,
+  deleteSales: salesController.deleteSales,
 };
